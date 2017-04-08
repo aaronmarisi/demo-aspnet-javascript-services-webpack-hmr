@@ -2,17 +2,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { MainComponent } from './main.component';
+import { OtherComponent } from './other.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: 'main',  component: MainComponent },
+  { path: 'other', component: OtherComponent },
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
