@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class MainComponent {
-  title = 'this is the main component';
+  title = 'this is the main component?';
 }

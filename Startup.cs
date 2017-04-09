@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -38,9 +33,9 @@ namespace demo_javascript_services_angular_cli
 
             app.UseMvc(routes => {
               routes.MapRoute(
-                name: "fake-api",
-                template: "api/{id?}",
-                defaults: new { controller = "FakeApi", action = "Index"});
+                name: "api",
+                template: "api/{message}",
+                defaults: new { controller = "Api", action = "Message"});
 
               routes.MapSpaFallbackRoute(
                 name: "spa-fallback",
