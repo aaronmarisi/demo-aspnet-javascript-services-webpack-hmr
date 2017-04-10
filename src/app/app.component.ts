@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
+export const rootElementTagName = 'app-root';
+
 @Component({
-  selector: 'app-root',
+  selector: rootElementTagName,
   template: `
     <nav>
       <a routerLink="/main">main</a> |

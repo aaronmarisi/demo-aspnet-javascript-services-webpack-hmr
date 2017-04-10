@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { AppComponent, rootElementTagName } from './app.component';
 import { MainComponent } from './main.component';
 import { OtherComponent } from './other.component';
 
@@ -30,3 +30,5 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export { rootElementTagName } from './app.component';
