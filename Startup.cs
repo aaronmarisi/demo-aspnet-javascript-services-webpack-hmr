@@ -19,14 +19,13 @@ namespace demo_javascript_services_angular_cli
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole();
-            var logger = loggerFactory.CreateLogger("Startup");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            #if RANDOM_UNDEFINED_CONSTANT
-              logger.LogWarning("Inside #if debug");
+            #if DEBUG
               app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
                 HotModuleReplacement = true
               });

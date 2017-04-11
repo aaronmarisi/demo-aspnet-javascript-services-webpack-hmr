@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-public class ApiController : Controller
+public class ApiController : ControllerBase
 {
     public IActionResult Message(string message)
     {

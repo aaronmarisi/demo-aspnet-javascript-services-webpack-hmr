@@ -1,15 +1,15 @@
 import { Type, PlatformRef } from '@angular/core';
 
-export interface HotModule extends NodeModule {
+interface HotModule extends NodeModule {
   hot?: HotModuleHandler;
 }
 
-export interface HotModuleHandler {
+interface HotModuleHandler {
   accept: () => void;
   dispose: (callback: () => void) => void;
 }
 
-export function handleHotModule<TNgModule>(
+export function handleHotModule(
   bootstrapModule: HotModule,
   rootElemTagName: string,
   platform: PlatformRef,
