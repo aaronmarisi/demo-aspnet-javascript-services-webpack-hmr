@@ -1,5 +1,5 @@
 # Angular, ASP.NET Core JavaScript Services 
-## _with webpack HMR and SpaFallbackRoute_
+### _with webpack HMR and SpaFallbackRoute_
 
 Read more about this repository at [angularfirst.com](http://angularfirst.com).
 
