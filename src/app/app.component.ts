@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// exported to use with webpack HMR
 export const rootElementTagName = 'app-root';
 
 @Component({
