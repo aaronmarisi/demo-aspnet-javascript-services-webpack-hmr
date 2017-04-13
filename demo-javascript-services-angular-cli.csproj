@@ -12,6 +12,6 @@
   </ItemGroup>
 
   <Target Name="AngularBuild" AfterTargets="Build">
-    <Exec Condition="'$(Configuration)' != 'Debug'" Command="npm run build" />
+    <Exec Condition="'$(Configuration)' == 'Release'" Command="npm run build" />
   </Target>
 </Project>

@@ -22,14 +22,11 @@ namespace demo_javascript_services_angular_cli
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
-            }
-
-            #if DEBUG
+              app.UseDeveloperExceptionPage();
               app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
                 HotModuleReplacement = true
               });
-            #endif
+            }
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
